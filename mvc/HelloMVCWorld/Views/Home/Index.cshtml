@@ -10,6 +10,20 @@
     <title>@Model.Title</title>
 </head>
 <body>
-The movie <b>@Model.Title</b> was released @Model.ReleaseDate.ToLongDateString()
+
+@{
+    var helloWorldMsg = "Good day";
+    if(DateTime.Now.Hour > 17)
+    {
+        helloWorldMsg = "Good evening";
+    }
+    helloWorldMsg += ", world!";
+    helloWorldMsg = helloWorldMsg.ToUpper();
+}
+<div>
+    @helloWorldMsg
+</div>
+
+
 </body>
 </html>
