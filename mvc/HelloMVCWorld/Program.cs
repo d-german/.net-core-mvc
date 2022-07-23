@@ -5,9 +5,18 @@ namespace HelloMVCWorld
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var app = builder.Build();
 
-            app.MapGet("/", () => "Hello World!");
+            builder.Services.AddMvc();
+
+
+            var app = builder.Build();
+            
+            app.UseRouting();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapDefaultControllerRoute();
+            });
+            
 
             app.Run();
         }
