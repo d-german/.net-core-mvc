@@ -1,15 +1,4 @@
 ﻿@model HelloMVCWorld.Models.Movie
 @{
-    Layout = null;
+    Layout = "Shared/_Layout";
 }
-
-<!DOCTYPE html>
-
-<html lang="">
-<head>
-    <title>@Model.Title</title>
-</head>
-<body>
-The movie <b>@Model.Title</b> was released @Model.ReleaseDate?.ToLongDateString()
-</body>
-</html>

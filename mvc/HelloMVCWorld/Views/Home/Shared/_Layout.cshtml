@@ -1,0 +1,13 @@
+﻿@model HelloMVCWorld.Models.Movie
+<!DOCTYPE html>
+
+<html lang="">
+<head>
+    <title>@Model.Title</title>
+</head>
+<body>
+The movie <b>@Model.Title</b> was released @Model.ReleaseDate?.ToLongDateString()
+@RenderBody()
+</body>
+</html>
+

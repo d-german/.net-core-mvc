@@ -7,6 +7,9 @@ public class HomeController : Controller
 {
     public IActionResult Index()
     {
-        return View(new Movie("The Godfather"));
+        return View(new Movie("The Godfather")
+        {
+            ReleaseDate = new DateTime(1972, 3, 24)
+        });
     }
 }
