@@ -8,6 +8,11 @@
 <body>
 The movie <b>@Model.Title</b> was released @Model.ReleaseDate?.ToLongDateString()
 @RenderBody()
+
+<p>Lots of Layout content goes here...</p>
+@await RenderSectionAsync("Footer");
+
+
 </body>
 </html>
 
